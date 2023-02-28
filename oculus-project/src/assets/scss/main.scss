@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    /*promeni font*/
+}
+
+.content-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+}
