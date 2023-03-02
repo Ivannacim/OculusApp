@@ -49,15 +49,18 @@ onMounted(() => {
         slideIndex.value = slides.value.length;
       }
       for (i = 0; i < slides.value.length; i++) {
-        slides[i].style.display = "none";
+        slides.value[i].style.display = "none";
       }
       for (i = 0; i < dots.value.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots.value[i].className = dots.value[i].className.replace(
+          " active",
+          ""
+        );
       }
-      slides[slideIndex.value - 1].style.display = "block";
-      dots[slideIndex.value - 1].className += " active";
+      slides.value[slideIndex.value - 1].style.display = "block";
+      dots.value[slideIndex.value - 1].className += " active";
     });
-  return plusSlides(), currentSlide(), showSlides(slideIndex);
+  showSlides(slideIndex.value);
 });
 
 /*function plusSlides(n) {
@@ -147,8 +150,6 @@ function currentSlide(n) {
     text-align: center;
     position: relative;
     top: -15px;
-    display: none; /*izbrisi kad namestis slider */
-
     .dot {
       cursor: pointer;
       height: 15px;
