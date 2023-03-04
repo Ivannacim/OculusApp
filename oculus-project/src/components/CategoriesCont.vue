@@ -52,9 +52,14 @@
       transition: 0.5s ease;
       backface-visibility: hidden;
       box-shadow: 0 0 10px rgba(33, 33, 33, 0.3);
+    }
 
-      &:hover {
+    &:hover {
+      img {
         opacity: 0.3;
+      }
+      .middle-text {
+        opacity: 1;
       }
     }
 
@@ -66,10 +71,6 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-
-      &:hover {
-        opacity: 1;
-      }
 
       a {
         text-decoration: none;

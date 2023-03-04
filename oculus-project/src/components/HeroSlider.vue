@@ -89,10 +89,14 @@ onMounted(() => {
       top: 60%;
       right: 4%;
       width: 250px;
+    }
 
-      &:nth-child(2) .text:nth-child(2) {
-        top: 30%;
-        right: 40%;
+    &:nth-child(2) {
+      .text {
+        &:nth-child(2) {
+          top: 30%;
+          right: 40%;
+        }
       }
     }
   }
@@ -130,7 +134,7 @@ onMounted(() => {
       cursor: pointer;
       height: 15px;
       width: 15px;
-      margin: 0 2px;
+      margin: 0 3px;
       background-color: #bbb;
       border-radius: 50%;
       display: inline-block;

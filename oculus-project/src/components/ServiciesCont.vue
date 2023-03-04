@@ -65,7 +65,7 @@
   }
 }
 .narrow-container {
-  padding: 10px 0;
+  padding: 15px 0;
   background-image: url("../assets/img/peach-marble-swirl-background-handmade-acrylic-paint.jpg");
   background-attachment: fixed;
   text-align: center;
