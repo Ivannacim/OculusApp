@@ -18,6 +18,14 @@
       </div>
     </div>
   </div>
+  <div class="narrow-container">
+    <div class="content-wrapper">
+      <p>
+        Online shop Optike Oculus nudi široki spektar stranih i domaćih brendova
+        dioptrijskih okvira i naočara za sunce
+      </p>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -27,7 +35,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  margin: 35px auto;
+  margin: 20px auto;
 
   .service {
     display: flex;
@@ -54,6 +62,18 @@
       font-weight: 500;
       line-height: 20px;
     }
+  }
+}
+.narrow-container {
+  padding: 10px 0;
+  background-image: url("../assets/img/peach-marble-swirl-background-handmade-acrylic-paint.jpg");
+  background-attachment: fixed;
+  text-align: center;
+
+  p {
+    font-size: 20px;
+    color: #313131;
+    margin: 0 auto;
   }
 }
 </style>

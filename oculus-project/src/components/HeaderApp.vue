@@ -42,7 +42,7 @@
                 </ul>
               </RouterLink>
             </li>
-            <li><RouterLink to="/onlineApp">Probaj online</RouterLink></li>
+            <li><RouterLink to="/lenses">Probaj online</RouterLink></li>
             <li><RouterLink to="/contact">Kontakt</RouterLink></li>
           </ul>
         </nav>
