@@ -52,7 +52,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.854);
 
   .content-wrapper {
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 5px;
     display: flex;
     justify-content: space-evenly;
