@@ -22,12 +22,16 @@
           alt="woman wearing eyeglasses"
         />
         <div class="middle-text">
-          <a href="#">Ženski okviri</a>
+          <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
 
 <style lang="scss" scoped>
 .categories-container {
