@@ -2,7 +2,7 @@
   <div class="aboutus-container">
     <div class="content-wrapper">
       <div class="aboutus-img">
-        <img src="../assets/img/pexels-francesco-paggiaro.jpg" alt="frames" />
+        <img src="img/pexels-francesco-paggiaro.jpg" alt="frames" />
       </div>
       <div class="aboutus-text">
         <p>

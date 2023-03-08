@@ -8,28 +8,22 @@
       </p>
       <div class="brands">
         <div class="brand-logo">
-          <img src="../assets/img/armani-png-logo-6724.png" alt="armani logo" />
+          <img src="/img/armani-png-logo-6724.png" alt="armani logo" />
+        </div>
+        <div class="brand-logo">
+          <img src="/img/vogue-logo-png-transparent.png" alt="vogue logo" />
         </div>
         <div class="brand-logo">
           <img
-            src="../assets/img/vogue-logo-png-transparent.png"
-            alt="vogue logo"
-          />
-        </div>
-        <div class="brand-logo">
-          <img
-            src="../assets/img/Dolce__Gabbana_logo_white_5000x555.png"
+            src="/img/Dolce__Gabbana_logo_white_5000x555.png"
             alt="dolce&amp;gabbana logo"
           />
         </div>
         <div class="brand-logo">
-          <img
-            src="../assets/img/ray-ban-logo-png-transparent.png"
-            alt="ray-ban logo"
-          />
+          <img src="/img/ray-ban-logo-png-transparent.png" alt="ray-ban logo" />
         </div>
         <div class="brand-logo">
-          <img src="../assets/img/michaelkors.png" alt="michael-kors logo" />
+          <img src="/img/michaelkors.png" alt="michael-kors logo" />
         </div>
       </div>
     </div>
@@ -77,7 +71,7 @@
 .narrow-blue {
   width: 100%;
   height: 100px;
-  background-image: url(../assets/img/2763873.jpg);
+  background-image: url(../img/2763873.jpg);
   background-attachment: fixed;
 }
 </style>

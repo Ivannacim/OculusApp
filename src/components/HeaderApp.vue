@@ -17,9 +17,7 @@
     <div class="content-wrapper">
       <div class="header-container">
         <div class="logo">
-          <a href="#"
-            ><img src="../assets/img/logo-oculus.png" alt="Oculus logo"
-          /></a>
+          <a href="#"><img src="/img/logo-oculus.png" alt="Oculus logo" /></a>
         </div>
 
         <!-- Navigacija -->

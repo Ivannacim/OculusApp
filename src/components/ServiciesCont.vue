@@ -2,17 +2,17 @@
   <div class="servicies-container">
     <div class="content-wrapper">
       <div class="service">
-        <img src="../assets/img/lg-brown.png" alt="service picture" />
+        <img src="/img/lg-brown.png" alt="service picture" />
         <h2>Ugradnja stakala</h2>
         <p>Kvalitetna i precizna ugradnja dioptrijskih stakala.</p>
       </div>
       <div class="service">
-        <img src="../assets/img/lg3-brown.png" alt="service picture" />
+        <img src="/img/lg3-brown.png" alt="service picture" />
         <h2>Nega oka</h2>
         <p>Korisni saveti za negu očiju od strane stručnog osoblja</p>
       </div>
       <div class="service">
-        <img src="../assets/img/lg4-brown.png" alt="service picture" />
+        <img src="/img/lg4-brown.png" alt="service picture" />
         <h2>Očni pregled</h2>
         <p>Kontrola oštrine vida po ustanovljenoj praksi i rutini</p>
       </div>
@@ -66,7 +66,7 @@
 }
 .narrow-container {
   padding: 15px 0;
-  background-image: url("../assets/img/peach-marble-swirl-background-handmade-acrylic-paint.jpg");
+  background-image: url("/img/peach-marble-swirl-background-handmade-acrylic-paint.jpg");
   background-attachment: fixed;
   text-align: center;
 

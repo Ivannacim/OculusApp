@@ -3,7 +3,7 @@
     <div class="content-wrapper">
       <div class="footer-about">
         <h3>Oculus</h3>
-        <img src="../assets/img/logo-oculus.png" alt="oculus logo" />
+        <img src="/img/logo-oculus.png" alt="oculus logo" />
         <p>
           Optika Oculus vam pruža sve za vid i negu oka sa odličnim rasponom
           cena, širokim asortimanom i uslugom.
@@ -15,12 +15,8 @@
         <a href="#">Naočare za sunce</a>
         <h4>Društvene mreže:</h4>
         <div class="social-icons">
-          <a href="#"
-            ><img src="../assets/img/Vector1.png" alt="instagram-icon"
-          /></a>
-          <a href="#"
-            ><img src="../assets/img/Vector2.png" alt="facebook-icon"
-          /></a>
+          <a href="#"><img src="/img/Vector1.png" alt="instagram-icon" /></a>
+          <a href="#"><img src="/img/Vector2.png" alt="facebook-icon" /></a>
         </div>
       </div>
       <div class="footer-info">

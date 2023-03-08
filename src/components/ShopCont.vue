@@ -5,46 +5,43 @@
 
       <div class="shop-gallery">
         <a href="#" class="frames">
-          <img src="../assets/img/framear1.png" alt="armani frame" />
+          <img src="/img/framear1.png" alt="armani frame" />
           <h4>Armani</h4>
           <p>AX1034</p>
         </a>
 
         <a href="#" class="frames">
-          <img src="../assets/img/framebu1.png" alt="burberry frame" />
+          <img src="/img/framebu1.png" alt="burberry frame" />
           <h4>Burberry</h4>
           <p>BE2363</p>
         </a>
         <a href="#" class="frames">
-          <img src="../assets/img/framemk1.png" alt="michael-kors frame" />
+          <img src="/img/framemk1.png" alt="michael-kors frame" />
           <h4>Michael Kors</h4>
           <p>MK4058</p>
         </a>
         <a href="#" class="frames">
-          <img src="../assets/img/framepr1.png" alt="prada frame" />
+          <img src="/img/framepr1.png" alt="prada frame" />
           <h4>Prada</h4>
           <p>PR 18WV</p>
         </a>
         <a href="#" class="frames">
-          <img src="../assets/img/frameroundpr1.png" alt="prada frame" />
+          <img src="/img/frameroundpr1.png" alt="prada frame" />
           <h4>Prada</h4>
           <p>PR 16TA</p>
         </a>
         <a href="#" class="frames">
-          <img
-            src="../assets/img/framerounddg1.png"
-            alt="dolce&amp;gabbana frame"
-          />
+          <img src="/img/framerounddg1.png" alt="dolce&amp;gabbana frame" />
           <h4>Dolce&amp;Gabbana</h4>
           <p>DG3235</p>
         </a>
         <a href="#" class="frames">
-          <img src="../assets/img/frameroundbu1.png" alt="burberry frame" />
+          <img src="/img/frameroundbu1.png" alt="burberry frame" />
           <h4>Burberry</h4>
           <p>BE3572</p>
         </a>
         <a href="#" class="frames">
-          <img src="../assets/img/frameroundmk1.png" alt="michael-kors frame" />
+          <img src="/img/frameroundmk1.png" alt="michael-kors frame" />
           <h4>Michael Kors</h4>
           <p>MK7345</p>
         </a>

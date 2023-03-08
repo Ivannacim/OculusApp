@@ -3,7 +3,7 @@
     <div class="content-wrapper">
       <div class="categories">
         <img
-          src="../assets/img/pexels-andrea-piacquadio.jpg"
+          src="/img/pexels-andrea-piacquadio.jpg"
           alt="man wearing eyeglasses"
         />
         <div class="middle-text">
@@ -11,14 +11,14 @@
         </div>
       </div>
       <div class="categories">
-        <img src="../assets/img/pexels-pavel-danilyuk.jpg" alt="eyeglasses" />
+        <img src="/img/pexels-pavel-danilyuk.jpg" alt="eyeglasses" />
         <div class="middle-text">
           <a href="lenses.html">Stakla</a>
         </div>
       </div>
       <div class="categories">
         <img
-          src="../assets/img/pexels-andrea-piacquadio2.jpg"
+          src="img/pexels-andrea-piacquadio2.jpg"
           alt="woman wearing eyeglasses"
         />
         <div class="middle-text">

@@ -1,17 +1,17 @@
 <template>
   <div class="slideshow-container">
     <div class="mySlides fade">
-      <img src="../assets/img/hero-image1.jpg" />
+      <img src="/img/hero-image1.jpg" />
       <div class="text">Veliki izbor naočara za sunce</div>
     </div>
 
     <div class="mySlides fade">
-      <img src="../assets/img/hero-image2.jpg" />
+      <img src="/img/hero-image2.jpg" />
       <div class="text">Photogray stakla</div>
     </div>
 
     <div class="mySlides fade">
-      <img src="../assets/img/hero-image3.jpg" />
+      <img src="/img/hero-image3.jpg" />
       <div class="text">Dioptrijski okviri poznatih brendova</div>
     </div>
 

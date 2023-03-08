@@ -13,6 +13,8 @@
       <div class="filteredFrames">
         <div class="frames" v-for="image in filteredImages" :key="image.id">
           <img :src="image.src" :alt="image.alt" />
+          <h4>{{ image.brand }}</h4>
+          <p>{{ image.kod }}</p>
         </div>
       </div>
     </div>
@@ -77,6 +79,7 @@ const filterImages = (category) => {
       padding: 12px 18px;
       border-style: none;
       border-radius: 5px;
+      border: 2px solid transparent;
 
       &:hover {
         border: 2px solid #313131;
@@ -89,7 +92,40 @@ const filterImages = (category) => {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-content: center;
-    gap: 50px 50px;
+    gap: 20px 20px;
+
+    .frames {
+      width: 250px;
+      height: 250px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      color: #000;
+      text-decoration: none;
+      /* border: 1px solid #ccc; */
+      border-radius: 7px;
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(33, 33, 33, 0.3);
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 30px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
   }
 }
 </style>

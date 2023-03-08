@@ -29,7 +29,7 @@
 
 <script setup>
 import { ref } from "vue";
-import productImage from "../assets/img/lg-brown.png";
+import productImage from "/img/lg-brown.png";
 
 let product = ref("Pradica");
 let features = ref(["Plastika", "Odgovara svim oblicima lica", "Stakla"]);
@@ -37,17 +37,17 @@ let variants = ref([
   {
     variantId: 1,
     variantColor: "red",
-    variantImage: ref("../assets/img/lg-brown.png"),
+    variantImage: ref("/img/lg-brown.png"),
   },
   {
     variantId: 2,
     variantColor: "white",
-    variantImage: ref("../assets/img/lg3-brown.png"),
+    variantImage: ref("/img/lg3-brown.png"),
   },
   {
     variantId: 3,
     variantColor: "black",
-    variantImage: ref("../assets/img/lg4-brown.png"),
+    variantImage: ref("/img/lg4-brown.png"),
   },
 ]);
 

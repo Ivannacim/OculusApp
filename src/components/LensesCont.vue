@@ -2,7 +2,7 @@
   <div class="glasses-container">
     <div class="content-wrapper">
       <div class="lenses">
-        <img src="../assets/img/lenses.png" alt="lenses" />
+        <img src="/img/lenses.png" alt="lenses" />
       </div>
       <div class="about-lenses">
         <h3>Dioptrijska stakla</h3>
@@ -15,7 +15,7 @@
         <button>Saznaj više</button>
       </div>
       <div class="glasses">
-        <img src="../assets/img/glasses.png" alt="glasses" />
+        <img src="/img/glasses.png" alt="glasses" />
       </div>
     </div>
   </div>
