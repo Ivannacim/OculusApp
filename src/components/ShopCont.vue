@@ -13,7 +13,7 @@
         <a href="#" class="frames">
           <img src="/img/framebu1.png" alt="burberry frame" />
           <h4>Burberry</h4>
-          <p>BE2363</p>
+          <p>BU2363</p>
         </a>
         <a href="#" class="frames">
           <img src="/img/framemk1.png" alt="michael-kors frame" />

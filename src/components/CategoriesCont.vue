@@ -13,7 +13,7 @@
       <div class="categories">
         <img src="/img/pexels-pavel-danilyuk.jpg" alt="eyeglasses" />
         <div class="middle-text">
-          <a href="lenses.html">Stakla</a>
+          <RouterLink to="/lenses">Stakla</RouterLink>
         </div>
       </div>
       <div class="categories">
