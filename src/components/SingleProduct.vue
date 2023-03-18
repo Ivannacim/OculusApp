@@ -29,25 +29,25 @@
 
 <script setup>
 import { ref } from "vue";
-import productImage from "/img/lg-brown.png";
 
-let product = ref("Pradica");
+let product = ref("Burberry");
+let productImage = ref("/img/frames/women/oval/frameovalbu1.png");
 let features = ref(["Plastika", "Odgovara svim oblicima lica", "Stakla"]);
 let variants = ref([
   {
     variantId: 1,
-    variantColor: "red",
-    variantImage: ref("/img/lg-brown.png"),
+    variantColor: "blue",
+    variantImage: ref("/img/frames/women/oval/frameovalbu1.png"),
   },
   {
     variantId: 2,
-    variantColor: "white",
-    variantImage: ref("/img/lg3-brown.png"),
+    variantColor: "brown",
+    variantImage: ref("/img/frames/women/oval/frameovalbu1brown.png"),
   },
   {
     variantId: 3,
-    variantColor: "black",
-    variantImage: ref("/img/lg4-brown.png"),
+    variantColor: "darkbrown",
+    variantImage: ref("/img/frames/women/oval/frameovalbu1darkbrown.png"),
   },
 ]);
 
@@ -55,3 +55,28 @@ function updateImage(variantImage) {
   productImage.value = variantImage;
 }
 </script>
+
+<style lang="scss" scoped>
+.container {
+  margin-top: 70px;
+  .product {
+    margin: 0 auto;
+    width: 40%;
+
+    .image {
+      width: 30%;
+
+      img {
+        width: 100%;
+      }
+    }
+    .colorBox {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      border: 5px solid #ccc;
+      cursor: pointer;
+    }
+  }
+}
+</style>

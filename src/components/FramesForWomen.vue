@@ -3,12 +3,48 @@
     <div class="content-wrapper">
       <h1>Dioptrijski okviri</h1>
       <div class="btn-filtering">
-        <button class="btn" @click="filterImages('all')">Sve</button>
-        <button class="btn" @click="filterImages('square')">Četvrtasti</button>
-        <button class="btn" @click="filterImages('oval')">Ovalni</button>
-        <button class="btn" @click="filterImages('pilot')">Pilot</button>
-        <button class="btn" @click="filterImages('cat-eye')">Mačkasti</button>
-        <button class="btn" @click="filterImages('round')">Okrugli</button>
+        <button
+          class="btn"
+          :class="{ active: state.filter === 'all' }"
+          @click="filterImages('all')"
+        >
+          Sve
+        </button>
+        <button
+          class="btn"
+          :class="{ active: state.filter === 'square' }"
+          @click="filterImages('square')"
+        >
+          Četvrtasti
+        </button>
+        <button
+          class="btn"
+          :class="{ active: state.filter === 'oval' }"
+          @click="filterImages('oval')"
+        >
+          Ovalni
+        </button>
+        <button
+          class="btn"
+          :class="{ active: state.filter === 'pilot' }"
+          @click="filterImages('pilot')"
+        >
+          Pilot
+        </button>
+        <button
+          class="btn"
+          :class="{ active: state.filter === 'cat-eye' }"
+          @click="filterImages('cat-eye')"
+        >
+          Mačkasti
+        </button>
+        <button
+          class="btn"
+          :class="{ active: state.filter === 'round' }"
+          @click="filterImages('round')"
+        >
+          Okrugli
+        </button>
       </div>
       <div class="filteredFrames">
         <div class="frames" v-for="image in filteredImages" :key="image.id">
@@ -81,7 +117,8 @@ const filterImages = (category) => {
       border-radius: 5px;
       border: 2px solid transparent;
 
-      &:hover {
+      &:hover,
+      &.active {
         border: 2px solid #313131;
         cursor: pointer;
       }
@@ -110,6 +147,7 @@ const filterImages = (category) => {
 
       &:hover {
         box-shadow: 0 0 10px rgba(33, 33, 33, 0.3);
+        cursor: pointer;
       }
 
       img {
