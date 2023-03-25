@@ -134,8 +134,16 @@
   align-items: center;
   gap: 10px;
 
+  @media screen and (max-width: 600px) {
+    padding: 20px 10px;
+  }
+
   .lenses-img {
     width: 20%;
+
+    @media screen and (max-width: 600px) {
+      width: 30%;
+    }
 
     img {
       width: 100%;
@@ -153,6 +161,10 @@
     p {
       width: 50%;
       text-align: center;
+
+      @media screen and (max-width: 600px) {
+        width: 70%;
+      }
     }
   }
 }
@@ -179,6 +191,10 @@
   justify-items: center;
   align-content: center;
   gap: 50px 0px;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   .technology-content {
     width: 80%;
