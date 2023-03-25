@@ -5,6 +5,7 @@
         <img src="img/pexels-francesco-paggiaro.jpg" alt="frames" />
       </div>
       <div class="aboutus-text">
+        <h2>O nama</h2>
         <p>
           Optika Oculus se nalazi u Beogradu i pruža kompletnu uslugu Vašem vidu
           sa odličnim rasponom cena i širokim asortimanom.
@@ -17,7 +18,7 @@
 
 <style lang="scss" scoped>
 .aboutus-container {
-  padding: 40px 0;
+  padding: 40px 10px;
 }
 
 .aboutus-container,
@@ -29,8 +30,19 @@
   align-items: center;
   gap: 40px;
 
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
   .aboutus-img {
     width: 50%;
+
+    @media screen and (max-width: 768px) {
+      width: 60%;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 80%;
+    }
 
     img {
       width: 100%;
@@ -46,16 +58,33 @@
     align-items: center;
     gap: 30px;
 
+    @media screen and (max-width: 480px) {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
     p {
       width: 90%;
       text-align: center;
       font-size: 20px;
       color: #313131;
+
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
     }
 
     button {
-      width: 22%;
-      padding: 10px 5px;
+      padding: 10px 15px;
       font-size: 18px;
       font-weight: 500;
       border-style: none;
@@ -63,6 +92,10 @@
       background-color: #fbb08a;
       color: #313131;
       cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
 
       &:hover {
         background-color: #f39e73;

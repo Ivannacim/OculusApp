@@ -35,10 +35,18 @@
   justify-content: space-around;
   align-items: center;
 
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
   .lenses {
     width: 33%;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 600px) {
+      order: 2;
+      width: 50%;
+    }
 
     img {
       width: 50%;
@@ -55,8 +63,23 @@
     align-items: flex-start;
     gap: 35px;
 
+    @media screen and (max-width: 768px) {
+      width: 60%;
+    }
+
+    @media screen and (max-width: 600px) {
+      order: 1;
+      width: 50%;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 90%;
+      align-items: center;
+      text-align: center;
+    }
+
     h3 {
-      font-size: 32px;
+      font-size: 24px;
       font-weight: 700;
       color: #313131;
     }
@@ -65,16 +88,25 @@
       font-size: 17px;
       font-weight: 400;
       line-height: 22px;
+
+      @media screen and (max-width: 600px) {
+        width: 90%;
+        font-size: 16px;
+      }
     }
     button {
-      width: 35%;
-      padding: 10px 5px;
+      padding: 10px 15px;
       font-size: 18px;
       font-weight: 500;
       border-style: none;
       border-radius: 7px;
       background-color: #313131;
       color: #fbb08a;
+
+      @media screen and (max-width: 600px) {
+        padding: 10px 12px;
+        font-size: 16px;
+      }
 
       &:hover {
         background-color: #414141;
@@ -86,6 +118,10 @@
 
   .glasses {
     width: 33%;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
 
     img {
       width: 80%;

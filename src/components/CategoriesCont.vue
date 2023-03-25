@@ -35,7 +35,7 @@ import { RouterLink } from "vue-router";
 
 <style lang="scss" scoped>
 .categories-container {
-  padding: 60px 0;
+  padding: 60px 20px;
 }
 
 .categories-container,
@@ -45,9 +45,17 @@ import { RouterLink } from "vue-router";
   align-items: center;
   gap: 40px;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .categories {
     width: 50%;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
 
     img {
       width: 100%;
@@ -75,6 +83,7 @@ import { RouterLink } from "vue-router";
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      white-space: nowrap;
 
       a {
         text-decoration: none;
@@ -85,6 +94,12 @@ import { RouterLink } from "vue-router";
         padding: 14px 24px;
         border-style: none;
         border-radius: 5px;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 16px;
+          letter-spacing: 1px;
+          padding: 14px 20px;
+        }
       }
     }
   }

@@ -45,6 +45,11 @@
     font-weight: 700;
     text-align: center;
 
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      font-size: 24px;
+    }
+
     a {
       color: #fbb08a;
       text-decoration: none;

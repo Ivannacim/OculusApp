@@ -9,30 +9,32 @@
           cena, širokim asortimanom i uslugom.
         </p>
       </div>
-      <div class="footer-links">
-        <h4>Shop:</h4>
-        <RouterLink to="/sunglasses">Muški okviri</RouterLink>
-        <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
-        <h4>Društvene mreže:</h4>
-        <div class="social-icons">
-          <a href="#"><img src="/img/Vector1.png" alt="instagram-icon" /></a>
-          <a href="#"><img src="/img/Vector2.png" alt="facebook-icon" /></a>
+      <div class="footer-content">
+        <div class="footer-links">
+          <h4>Shop:</h4>
+          <RouterLink to="/sunglasses">Muški okviri</RouterLink>
+          <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
+          <h4>Društvene mreže:</h4>
+          <div class="social-icons">
+            <a href="#"><img src="/img/Vector1.png" alt="instagram-icon" /></a>
+            <a href="#"><img src="/img/Vector2.png" alt="facebook-icon" /></a>
+          </div>
         </div>
-      </div>
-      <div class="footer-info">
-        <h4>Adresa:</h4>
-        <p>Bulevar kralja Aleksandra bb</p>
-        <p>Beograd</p>
+        <div class="footer-info">
+          <h4>Adresa:</h4>
+          <p>Bulevar kralja Aleksandra bb</p>
+          <p>Beograd</p>
 
-        <h4>Telefon:</h4>
-        <p>011/123 45 67</p>
+          <h4>Telefon:</h4>
+          <p>011/123 45 67</p>
 
-        <h4>Email:</h4>
-        <p>oculus@gmail.com</p>
+          <h4>Email:</h4>
+          <p>oculus@gmail.com</p>
 
-        <h4>Radno vreme:</h4>
-        <p>Radnim danima : 09-20h</p>
-        <p>Subota : 09-15h</p>
+          <h4>Radno vreme:</h4>
+          <p>Radnim danima : 09-20h</p>
+          <p>Subota : 09-15h</p>
+        </div>
       </div>
     </div>
     <div class="footer-end">
@@ -50,25 +52,37 @@ footer {
   background-color: rgba(255, 255, 255, 0.854);
 
   .content-wrapper {
-    padding-top: 20px;
-    padding-bottom: 5px;
+    padding: 20px 10px 5px 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: baseline;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
 
     .footer-about {
       width: 40%;
-      /* margin-right: 50px; */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
 
+      @media screen and (max-width: 480px) {
+        width: 90%;
+      }
+
       h3 {
         font-size: 32px;
         font-weight: 700;
         color: #29a5a1;
+
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+        }
       }
 
       img {
@@ -81,64 +95,101 @@ footer {
         text-align: justify;
       }
     }
-    .footer-links {
-      width: 30%;
-      margin-left: 50px;
+    .footer-content {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
+      justify-content: space-around;
+      align-items: baseline;
 
-      h4 {
-        font-size: 24px;
-        color: #29a5a1;
-
-        &:nth-child(2) {
-          padding-top: 40px;
-        }
+      @media screen and (max-width: 480px) {
+        justify-content: center;
       }
 
-      a {
-        display: block;
-        color: #000;
-        font-size: 16px;
-        text-decoration: none;
+      .footer-links {
+        width: 30%;
+        //margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
 
-        &:hover {
-          color: #df865a;
+        @media screen and (max-width: 480px) {
+          width: 60%;
+          margin-left: 10px;
         }
-      }
 
-      .social-icons {
+        h4 {
+          font-size: 24px;
+          color: #29a5a1;
+
+          @media screen and (max-width: 768px) {
+            font-size: 20px;
+          }
+
+          &:nth-child(2) {
+            padding-top: 40px;
+          }
+        }
+
         a {
-          margin-right: 5px;
-          display: inline;
-        }
+          display: block;
+          color: #000;
+          font-size: 16px;
+          text-decoration: none;
 
-        img {
-          display: inline-block;
-          width: 10%;
+          @media screen and (max-width: 600px) {
+            font-size: 14px;
+          }
 
           &:hover {
-            opacity: 0.8;
+            color: #df865a;
+          }
+        }
+
+        .social-icons {
+          a {
+            margin-right: 5px;
+            display: inline;
+          }
+
+          img {
+            display: inline-block;
+            width: 20%;
+
+            @media screen and (max-width: 480px) {
+              width: 10%;
+            }
+
+            &:hover {
+              opacity: 0.8;
+            }
           }
         }
       }
-    }
 
-    .footer-info {
-      width: 30%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
+      .footer-info {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
 
-      h4 {
-        padding-top: 10px;
-        font-size: 24px;
-        color: #29a5a1;
+        h4 {
+          padding-top: 10px;
+          font-size: 24px;
+          color: #29a5a1;
+
+          @media screen and (max-width: 768px) {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          @media screen and (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
@@ -146,6 +197,10 @@ footer {
   .footer-end {
     padding: 10px 0;
     text-align: center;
+
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
 
     span {
       color: #29a5a1;
