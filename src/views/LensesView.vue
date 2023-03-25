@@ -98,7 +98,7 @@
   height: 600px;
   background-image: url("img/ZEISS175-bannerFormats.jpg");
   background-size: cover;
-  background-position: right;
+  background-position: center;
 }
 
 .zeiss-lenses {

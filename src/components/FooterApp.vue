@@ -11,8 +11,8 @@
       </div>
       <div class="footer-links">
         <h4>Shop:</h4>
-        <a href="#">Naočare za vid</a>
-        <a href="#">Naočare za sunce</a>
+        <RouterLink to="/sunglasses">Muški okviri</RouterLink>
+        <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
         <h4>Društvene mreže:</h4>
         <div class="social-icons">
           <a href="#"><img src="/img/Vector1.png" alt="instagram-icon" /></a>
@@ -41,7 +41,9 @@
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
 
 <style lang="scss">
 footer {

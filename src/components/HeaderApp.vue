@@ -32,15 +32,15 @@
                 Naočare<i class="fa-solid fa-caret-down"></i>
                 <ul class="dropdown-content">
                   <li>
-                    <RouterLink to="/eyeglasses">Naočare za vid</RouterLink>
+                    <RouterLink to="/sunglasses">Muški okviri</RouterLink>
                   </li>
                   <li>
-                    <RouterLink to="/sunglasses">Naočare za sunce</RouterLink>
+                    <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
                   </li>
                 </ul>
               </RouterLink>
             </li>
-            <li><RouterLink to="/lenses">Probaj online</RouterLink></li>
+            <li><RouterLink to="/lenses">Stakla</RouterLink></li>
             <li><RouterLink to="/contact">Kontakt</RouterLink></li>
           </ul>
         </nav>
