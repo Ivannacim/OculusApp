@@ -23,7 +23,7 @@
         <!-- Navigacija -->
 
         <nav class="navbar">
-          <ul>
+          <ul v-show="!mobile" class="navigation">
             <li>
               <RouterLink to="/"><a>Oculus</a></RouterLink>
             </li>
@@ -43,6 +43,36 @@
             <li><RouterLink to="/lenses">Stakla</RouterLink></li>
             <li><RouterLink to="/contact">Kontakt</RouterLink></li>
           </ul>
+          <div class="icon">
+            <i
+              @click="toggleMobileNav"
+              v-show="mobile"
+              class="fa fa-bars"
+              :class="{ 'icon-active': mobileNav }"
+            ></i>
+          </div>
+          <transition name="mobile-nav">
+            <ul v-show="mobileNav" class="dropdown-nav">
+              <li>
+                <RouterLink to="/"><a>Oculus</a></RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/eyeglasses">
+                  Naočare<i class="fa-solid fa-caret-down"></i>
+                  <ul class="dropdown-content">
+                    <li>
+                      <RouterLink to="/sunglasses">Muški okviri</RouterLink>
+                    </li>
+                    <li>
+                      <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
+                    </li>
+                  </ul>
+                </RouterLink>
+              </li>
+              <li><RouterLink to="/lenses">Stakla</RouterLink></li>
+              <li><RouterLink to="/contact">Kontakt</RouterLink></li>
+            </ul>
+          </transition>
         </nav>
       </div>
     </div>
@@ -51,6 +81,30 @@
 
 <script setup>
 import { RouterLink } from "vue-router"; /*importuj svuda gde ima routerlink */
+/*
+import { ref, onCreated } from "vue";
+
+let mobile = ref(true);
+let mobileNav = ref(null);
+let windowWidth = ref(null);
+
+onCreated(() => {
+  window.addEventListener("resize", checkScreen.value);
+  checkScreen().value;
+});
+function toggleMobileNav() {
+  mobileNav.value != mobileNav.value;
+}
+
+function checkScreen() {
+  windowWidth.value = window.innerWidth;
+  if (windowWidth.value <= 768) {
+    mobile.value = true;
+  }
+  mobile.value = false;
+  mobileNav.value = false;
+}
+*/
 </script>
 
 <style lang="scss" scoped>
@@ -84,51 +138,101 @@ header {
         }
       }
 
-      .navbar ul {
-        list-style: none;
-        display: flex;
-        gap: 18px;
+      .navbar {
+        position: relative;
 
-        li {
-          position: relative;
-          float: left;
-          font-size: 18px;
-          font-family: Arial, Helvetica, sans-serif;
-          padding: 20px;
-          display: block;
+        ul {
+          list-style: none;
+          display: flex;
+          gap: 18px;
 
-          a {
-            text-decoration: none;
-            color: rgb(71, 77, 83);
+          li {
+            position: relative;
+            float: left;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            display: block;
+
+            a {
+              text-decoration: none;
+              color: rgb(71, 77, 83);
+              transition: 0.3s ease all;
+
+              &:hover {
+                color: #fbb08a;
+              }
+            }
+
+            i {
+              margin-left: 5px;
+            }
 
             &:hover {
-              color: #fbb08a;
+              ul {
+                display: initial;
+              }
+            }
+
+            ul {
+              position: absolute;
+              left: 0;
+              top: 105%;
+              width: 200px;
+              background-color: rgba(255, 255, 255, 0.9);
+              display: none;
+
+              li {
+                width: 100%;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+              }
             }
           }
+        }
+        .icon {
+          display: flex;
+          align-self: center;
+          position: absolute;
+          top: 0px;
+          right: 15px;
 
           i {
-            margin-left: 5px;
+            font-size: 20px;
+            cursor: pointer;
           }
+        }
 
-          &:hover {
-            ul {
-              display: initial;
-            }
+        .icon-active {
+          transform: rotate(180deg);
+        }
+        .dropdown-nav {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 250px;
+          height: 100%;
+          background-color: azure;
+
+          li {
+            margin-left: 0;
           }
+        }
 
-          ul {
-            position: absolute;
-            left: 0;
-            top: 105%;
-            width: 200px;
-            background-color: rgba(255, 255, 255, 0.9);
-            display: none;
+        .mobile-nav-enter-active,
+        .mobile-nav-leave-active {
+          transition: 1s ease all;
+        }
 
-            li {
-              width: 100%;
-              border-top: 1px solid rgba(0, 0, 0, 0.1);
-            }
-          }
+        .mobile-nav-enter-from,
+        .mobile-nav-leave-to {
+          transform: translateX(-250px);
+        }
+
+        .mobile-nav-enter-to {
+          transform: translateX(0);
         }
       }
     }
