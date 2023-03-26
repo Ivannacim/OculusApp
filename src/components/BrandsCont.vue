@@ -3,8 +3,11 @@
     <div class="content-wrapper">
       <p>
         Otkrijte
-        <a href="eyeglasses.html"><span>nove kolekcije</span></a> svojih
-        omiljenih brendova sa najnovijom tehnologijom polarizovanih sočiva
+        <RouterLink to="/eyeglasses"
+          ><a><span>nove kolekcije</span></a></RouterLink
+        >
+        svojih omiljenih brendova sa najnovijom tehnologijom polarizovanih
+        sočiva
       </p>
       <div class="brands">
         <div class="brand-logo">
@@ -31,6 +34,10 @@
 
   <div class="narrow-blue"></div>
 </template>
+
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
 
 <style lang="scss" scoped>
 .brands-container {

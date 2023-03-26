@@ -99,6 +99,10 @@ const filterImages = (category) => {
   h1 {
     font-size: 36px;
     font-weight: 700;
+
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
   }
 
   .btn-filtering {
@@ -106,6 +110,18 @@ const filterImages = (category) => {
     justify-content: space-around;
     align-items: center;
     gap: 20px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 auto;
+      width: 480px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 80%;
+    }
 
     .btn {
       background-color: white;
@@ -116,6 +132,10 @@ const filterImages = (category) => {
       border-style: none;
       border-radius: 5px;
       border: 2px solid transparent;
+
+      @media screen and (max-width: 768px) {
+        padding: 10px 14px;
+      }
 
       &:hover,
       &.active {
@@ -131,6 +151,14 @@ const filterImages = (category) => {
     align-content: center;
     gap: 20px 20px;
 
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .frames {
       width: 250px;
       height: 250px;
@@ -144,6 +172,11 @@ const filterImages = (category) => {
       /* border: 1px solid #ccc; */
       border-radius: 7px;
       transition: box-shadow 0.3s;
+
+      @media screen and (max-width: 768px) {
+        width: 230px;
+        height: 230px;
+      }
 
       &:hover {
         box-shadow: 0 0 10px rgba(33, 33, 33, 0.3);

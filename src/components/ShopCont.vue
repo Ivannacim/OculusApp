@@ -46,10 +46,21 @@
           <p>MK7345</p>
         </a>
       </div>
-      <button>Vidi okvire</button>
+      <button @click="click">Vidi okvire</button>
     </div>
   </div>
 </template>
+
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const click = () => {
+  router.push({
+    path: "/eyeglasses",
+  });
+};
+</script>
 
 <style lang="scss" scoped>
 .shop-container {

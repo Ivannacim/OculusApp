@@ -242,5 +242,9 @@ let images = ref([
   height: 600px;
   background-image: url("/img/pexels-ali-pazani-2810835.jpg");
   background-size: cover;
+
+  @media screen and (max-width: 480px) {
+    background-position: center;
+  }
 }
 </style>

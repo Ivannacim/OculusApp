@@ -12,7 +12,7 @@
           titanijumska stakla, bifokalna, multifokalna (progresivna) i foto
           stakla u više boja.
         </p>
-        <button>Saznaj više</button>
+        <button @click="click">Saznaj više</button>
       </div>
       <div class="glasses">
         <img src="/img/glasses.png" alt="glasses" />
@@ -20,6 +20,17 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const click = () => {
+  router.push({
+    path: "/lenses",
+  });
+};
+</script>
 
 <style lang="scss" scoped>
 .glasses-container {

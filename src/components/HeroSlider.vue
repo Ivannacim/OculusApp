@@ -89,6 +89,14 @@ onMounted(() => {
       top: 60%;
       right: 4%;
       width: 250px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+        top: 83%;
+        right: 30%;
+        text-shadow: 2px 2px #5c5b5b;
+        text-align: center;
+      }
     }
 
     &:nth-child(2) {
