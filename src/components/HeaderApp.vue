@@ -81,30 +81,33 @@
 
 <script setup>
 import { RouterLink } from "vue-router"; /*importuj svuda gde ima routerlink */
-/*
-import { ref, onCreated } from "vue";
+import { ref, onMounted } from "vue";
 
-let mobile = ref(true);
+let mobile = ref(null);
 let mobileNav = ref(null);
 let windowWidth = ref(null);
+let toggleMobileNav = () => null;
+let checkScreen = () => null;
 
-onCreated(() => {
-  window.addEventListener("resize", checkScreen.value);
-  checkScreen().value;
+onMounted(() => {
+  window.addEventListener("resize", checkScreen);
+
+  checkScreen = () => {
+    windowWidth.value = window.innerWidth;
+    if (windowWidth.value <= 768) {
+      mobile.value = true;
+    } else {
+      mobile.value = false;
+      mobileNav.value = false;
+    }
+  };
+  toggleMobileNav = () => {
+    mobileNav.value != mobileNav.value;
+    console.log("toggle navbar");
+  };
+  checkScreen();
+  toggleMobileNav();
 });
-function toggleMobileNav() {
-  mobileNav.value != mobileNav.value;
-}
-
-function checkScreen() {
-  windowWidth.value = window.innerWidth;
-  if (windowWidth.value <= 768) {
-    mobile.value = true;
-  }
-  mobile.value = false;
-  mobileNav.value = false;
-}
-*/
 </script>
 
 <style lang="scss" scoped>
