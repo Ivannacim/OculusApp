@@ -1,19 +1,5 @@
 <template>
   <header>
-    <!--
-    <nav>
-      <ul>
-        <li><RouterLink to="/">Oculus</RouterLink></li>
-        <li>
-          <RouterLink to="/eyeglasses">Naočare</RouterLink>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    -->
-
     <div class="content-wrapper">
       <div class="header-container">
         <div class="logo">
@@ -28,24 +14,17 @@
               <RouterLink to="/"><a>Oculus</a></RouterLink>
             </li>
             <li>
-              <RouterLink to="/eyeglasses">
-                Naočare<i class="fa-solid fa-caret-down"></i>
-                <ul class="dropdown-content">
-                  <li>
-                    <RouterLink to="/sunglasses">Muški okviri</RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
-                  </li>
-                </ul>
-              </RouterLink>
+              <RouterLink to="/eyeglasses">Muški okviri</RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
             </li>
             <li><RouterLink to="/lenses">Stakla</RouterLink></li>
             <li><RouterLink to="/contact">Kontakt</RouterLink></li>
           </ul>
           <div class="icon">
             <i
-              @click="toggleMobileNav"
+              @click="toggleMobileNav()"
               v-show="mobile"
               class="fa fa-bars"
               :class="{ 'icon-active': mobileNav }"
@@ -57,17 +36,10 @@
                 <RouterLink to="/"><a>Oculus</a></RouterLink>
               </li>
               <li>
-                <RouterLink to="/eyeglasses">
-                  Naočare<i class="fa-solid fa-caret-down"></i>
-                  <ul class="dropdown-content">
-                    <li>
-                      <RouterLink to="/sunglasses">Muški okviri</RouterLink>
-                    </li>
-                    <li>
-                      <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
-                    </li>
-                  </ul>
-                </RouterLink>
+                <RouterLink to="/eyeglasses">Muški okviri</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
               </li>
               <li><RouterLink to="/lenses">Stakla</RouterLink></li>
               <li><RouterLink to="/contact">Kontakt</RouterLink></li>
@@ -86,27 +58,26 @@ import { ref, onMounted } from "vue";
 let mobile = ref(null);
 let mobileNav = ref(null);
 let windowWidth = ref(null);
-let toggleMobileNav = () => null;
 let checkScreen = () => null;
+
+let toggleMobileNav = () => {
+  mobileNav.value = !mobileNav.value;
+};
+
+checkScreen = () => {
+  windowWidth.value = window.innerWidth;
+  if (windowWidth.value <= 768) {
+    mobile.value = true;
+  } else {
+    mobile.value = false;
+    mobileNav.value = false;
+  }
+};
 
 onMounted(() => {
   window.addEventListener("resize", checkScreen);
 
-  checkScreen = () => {
-    windowWidth.value = window.innerWidth;
-    if (windowWidth.value <= 768) {
-      mobile.value = true;
-    } else {
-      mobile.value = false;
-      mobileNav.value = false;
-    }
-  };
-  toggleMobileNav = () => {
-    mobileNav.value != mobileNav.value;
-    console.log("toggle navbar");
-  };
   checkScreen();
-  toggleMobileNav();
 });
 </script>
 
@@ -147,14 +118,14 @@ header {
         ul {
           list-style: none;
           display: flex;
-          gap: 18px;
+          gap: 10px;
 
           li {
             position: relative;
             float: left;
             font-size: 18px;
             font-family: Arial, Helvetica, sans-serif;
-            padding: 20px;
+            padding: 15px;
             display: block;
 
             a {
@@ -166,7 +137,7 @@ header {
                 color: #fbb08a;
               }
             }
-
+            /*
             i {
               margin-left: 5px;
             }
@@ -190,17 +161,18 @@ header {
                 border-top: 1px solid rgba(0, 0, 0, 0.1);
               }
             }
+            */
           }
         }
         .icon {
           display: flex;
           align-self: center;
           position: absolute;
-          top: 0px;
+          top: -10px;
           right: 15px;
 
           i {
-            font-size: 20px;
+            font-size: 24px;
             cursor: pointer;
           }
         }
@@ -211,16 +183,29 @@ header {
         .dropdown-nav {
           display: flex;
           flex-direction: column;
+          justify-content: flex-start;
+          padding-top: 10px;
           position: fixed;
-          top: 0;
+          top: 70px;
           left: 0;
-          width: 100%;
-          max-width: 250px;
-          height: 100%;
-          background-color: azure;
+          width: calc(100% - 80px);
+          //max-width: 300px;
+          height: calc(100% - 70px);
+          background-color: rgba(255, 255, 255, 0.9);
+          box-shadow: 0 20px 20px rgb(0, 0, 0, 0.5);
 
           li {
-            margin-left: 0;
+            text-align: center;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 52px;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: rgba(0, 0, 0, 0.3);
+            }
           }
         }
 
@@ -231,7 +216,7 @@ header {
 
         .mobile-nav-enter-from,
         .mobile-nav-leave-to {
-          transform: translateX(-250px);
+          transform: translateX(-700px);
         }
 
         .mobile-nav-enter-to {

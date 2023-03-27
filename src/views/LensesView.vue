@@ -249,6 +249,10 @@
             font-size: 16px;
           }
 
+          @media screen and (max-width: 600px) {
+            width: 80%;
+          }
+
           @media screen and (max-width: 480px) {
             font-size: 18px;
           }
