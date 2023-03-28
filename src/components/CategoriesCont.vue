@@ -7,7 +7,7 @@
           alt="man wearing eyeglasses"
         />
         <div class="middle-text">
-          <a href="#">Muški okviri</a>
+          <RouterLink to="/eyeglassesformen">Muški okviri</RouterLink>
         </div>
       </div>
       <div class="categories">
@@ -22,7 +22,7 @@
           alt="woman wearing eyeglasses"
         />
         <div class="middle-text">
-          <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
+          <RouterLink to="/eyeglassesforwomen">Ženski okviri</RouterLink>
         </div>
       </div>
     </div>

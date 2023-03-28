@@ -3,7 +3,7 @@
     <div class="content-wrapper">
       <p>
         Otkrijte
-        <RouterLink to="/eyeglasses"
+        <RouterLink to="/eyeglassesformen"
           ><a><span>nove kolekcije</span></a></RouterLink
         >
         svojih omiljenih brendova sa najnovijom tehnologijom polarizovanih

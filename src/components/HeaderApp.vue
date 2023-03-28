@@ -14,10 +14,10 @@
               <RouterLink to="/"><a>Oculus</a></RouterLink>
             </li>
             <li>
-              <RouterLink to="/eyeglasses">Muški okviri</RouterLink>
+              <RouterLink to="/eyeglassesformen">Muški okviri</RouterLink>
             </li>
             <li>
-              <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
+              <RouterLink to="/eyeglassesforwomen">Ženski okviri</RouterLink>
             </li>
             <li><RouterLink to="/lenses">Stakla</RouterLink></li>
             <li><RouterLink to="/contact">Kontakt</RouterLink></li>
@@ -36,10 +36,10 @@
                 <RouterLink to="/"><a>Oculus</a></RouterLink>
               </li>
               <li>
-                <RouterLink to="/eyeglasses">Muški okviri</RouterLink>
+                <RouterLink to="/eyeglassesformen">Muški okviri</RouterLink>
               </li>
               <li>
-                <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
+                <RouterLink to="/eyeglassesforwomen">Ženski okviri</RouterLink>
               </li>
               <li><RouterLink to="/lenses">Stakla</RouterLink></li>
               <li><RouterLink to="/contact">Kontakt</RouterLink></li>

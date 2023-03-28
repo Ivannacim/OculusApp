@@ -12,8 +12,8 @@
       <div class="footer-content">
         <div class="footer-links">
           <h4>Shop:</h4>
-          <RouterLink to="/sunglasses">Muški okviri</RouterLink>
-          <RouterLink to="/eyeglasses">Ženski okviri</RouterLink>
+          <RouterLink to="/eyeglassesformen">Muški okviri</RouterLink>
+          <RouterLink to="/eyeglassesforwomen">Ženski okviri</RouterLink>
           <h4>Društvene mreže:</h4>
           <div class="social-icons">
             <a href="#"><img src="/img/Vector1.png" alt="instagram-icon" /></a>

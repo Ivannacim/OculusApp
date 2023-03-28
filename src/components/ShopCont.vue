@@ -57,7 +57,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const click = () => {
   router.push({
-    path: "/eyeglasses",
+    path: "/eyeglassesforwomen",
   });
 };
 </script>
