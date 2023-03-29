@@ -33,16 +33,30 @@
           <transition name="mobile-nav">
             <ul v-show="mobileNav" class="dropdown-nav">
               <li>
-                <RouterLink to="/"><a>Oculus</a></RouterLink>
+                <RouterLink to="/" @click="hideMobileNav"
+                  ><a>Oculus</a></RouterLink
+                >
               </li>
               <li>
-                <RouterLink to="/eyeglassesformen">Muški okviri</RouterLink>
+                <RouterLink to="/eyeglassesformen" @click="hideMobileNav"
+                  >Muški okviri</RouterLink
+                >
               </li>
               <li>
-                <RouterLink to="/eyeglassesforwomen">Ženski okviri</RouterLink>
+                <RouterLink to="/eyeglassesforwomen" @click="hideMobileNav"
+                  >Ženski okviri</RouterLink
+                >
               </li>
-              <li><RouterLink to="/lenses">Stakla</RouterLink></li>
-              <li><RouterLink to="/contact">Kontakt</RouterLink></li>
+              <li>
+                <RouterLink to="/lenses" @click="hideMobileNav"
+                  >Stakla</RouterLink
+                >
+              </li>
+              <li>
+                <RouterLink to="/contact" @click="hideMobileNav"
+                  >Kontakt</RouterLink
+                >
+              </li>
             </ul>
           </transition>
         </nav>
@@ -62,6 +76,10 @@ let checkScreen = () => null;
 
 let toggleMobileNav = () => {
   mobileNav.value = !mobileNav.value;
+};
+
+let hideMobileNav = () => {
+  mobileNav.value = false;
 };
 
 checkScreen = () => {
