@@ -10,11 +10,22 @@
           Optika Oculus se nalazi u Beogradu i pruža kompletnu uslugu Vašem vidu
           sa odličnim rasponom cena i širokim asortimanom.
         </p>
-        <button>Saznaj više</button>
+        <button @click="click">Saznaj više</button>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const click = () => {
+  router.push({
+    path: "/aboutus",
+  });
+};
+</script>
 
 <style lang="scss" scoped>
 .aboutus-container {
